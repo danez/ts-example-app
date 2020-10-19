@@ -1,0 +1,26 @@
+{
+  "extends": "../tsconfig.build.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "ES2015",
+    "rootDir": "src",
+    "outDir": "build",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2015"
+    ],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "jsx": "react",
+    "allowJs": true,
+    "isolatedModules": true,
+    "noImplicitAny": false,
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "src/**/__tests__/**"
+  ]
+}

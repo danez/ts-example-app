@@ -1,0 +1,25 @@
+{
+  "name": "example-app",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "setup:api": "cd api && yarn install",
+    "setup:web": "cd web && yarn install",
+    "postinstall": "run-s setup:api setup:web",
+    "dev": "run-p dev:api dev:web",
+    "dev:api": "cd api && yarn dev",
+    "dev:web": "cd web && yarn dev",
+    "build": "run-s build:*",
+    "build:api": "cd api && yarn build",
+    "build:web": "cd web && yarn build",
+    "test": "run-s test:*",
+    "test:api": "cd api && yarn test",
+    "test:web": "cd web && yarn test"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  }
+}

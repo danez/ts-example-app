@@ -1,0 +1,28 @@
+{
+  "name": "example-api",
+  "version": "0.0.0",
+  "private": true,
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "build": "yarn clean && tsc --build tsconfig.build.json",
+    "start": "NODE_ENV=production fastify start -l warn -p 81 lib/index.js",
+    "test": "jest",
+    "dev": "ts-node ./node_modules/.bin/fastify start -w -l info -P -p 3001 src/index.ts"
+  },
+  "dependencies": {
+    "@types/node": "14.11.8",
+    "fastify": "3.6.0",
+    "fastify-autoload": "3.3.0",
+    "fastify-cli": "2.3.0",
+    "fastify-cors": "4.1.0",
+    "fastify-plugin": "3.0.0",
+    "typescript": "3.9.7"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.14",
+    "jest": "26.5.3",
+    "ts-jest": "26.4.1",
+    "ts-node": "9.0.0"
+  }
+}
